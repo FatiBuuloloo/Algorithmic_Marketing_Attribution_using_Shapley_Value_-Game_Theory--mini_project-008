@@ -48,7 +48,7 @@ To implement this formula in Python without running into logical errors (such as
 
 
 ## 📊 Key Findings & Business Impact
-
+![attribution_comparison](attribution_comparison.png)
 After normalizing the raw conversion data into percentages, the Game Theory model revealed critical insights that traditional models missed:
 
 * **Undervalued Channels (The Hidden Drivers):**
