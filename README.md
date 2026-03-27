@@ -1,6 +1,6 @@
 # Algorithmic Marketing Attribution using Shapley Value (Game Theory)
 
-## 📌 Project Overview
+## Project Overview
 In modern digital marketing, customers rarely make a purchase after interacting with just one channel. A typical customer journey might look like this: **Facebook > Instagram > Online Video > Paid Search > Conversion**. 
 
 Traditional attribution models (like **First-Touch** or **Last-Touch**) assign 100% of the conversion credit to a single channel, entirely ignoring the collaborative effort of the marketing mix. This project solves that problem by implementing **Cooperative Game Theory**, specifically the **Shapley Value**, to calculate the exact, fair contribution of each marketing channel.
@@ -9,7 +9,7 @@ Traditional attribution models (like **First-Touch** or **Last-Touch**) assign 1
 
 The dataset used in this project was sourced from [Link](https://github.com/AjNavneet/MultiTouch-Attribution-Marketing-Spend-Optimization/). It includes comprehensive documentation for each feature, providing a clear understanding of the customer touchpoints and conversion events used in this analysis.
 
-## 🧮 The Mathematical Logic: Why Shapley Value?
+## The Mathematical Logic: Why Shapley Value?
 
 The core concept of this project treats the marketing ecosystem as a "Cooperative Game" where channels form "Coalitions" (teams) to drive conversions. The Shapley Value ensures fairness by calculating every channel's marginal contribution across all possible permutations of customer journeys.
 
@@ -34,7 +34,7 @@ $$\phi_i = \sum_{S \subseteq N \setminus \{i\}} \frac{|S|! (n - |S| - 1)!}{n!} (
 * **$|S|! \times (n - |S| - 1)!$ (Numerator):** The number of sequences where the specific team $S$ is formed exactly before channel $i$ joins. 
 
 
-## ⚙️ Methodology & Code Logic
+## Methodology & Code Logic
 
 To implement this formula in Python without running into logical errors (such as negative conversion values), the data preparation followed strict Set Theory principles:
 
@@ -47,7 +47,7 @@ To implement this formula in Python without running into logical errors (such as
 3.  **Algorithmic Processing:** We utilized `itertools.combinations` to programmatically generate every possible coalition size (from 0 to $n-1$) and computed the weighted marginal contributions iteratively.
 
 
-## 📊 Key Findings & Business Impact
+## Key Findings & Business Impact
 ![attribution_comparison](attribution_comparison.png)
 After normalizing the raw conversion data into percentages, the Game Theory model revealed critical insights that traditional models missed:
 
